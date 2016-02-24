@@ -6,8 +6,8 @@
 
 <div class="panel panel-body">
 <% @messages.each do |message| %>
-<span class="label label-info"><% message.name %></span>
-<% message.body %>
+<span class="label label-info"><%= message.name %></span>
+<%= message.body %>
 
 <br>
 <% end %>
@@ -22,8 +22,8 @@
 
 内容：
 
-<%= f.text_field :body %>
+<%= f.text_area :body,:size =>"20x3" %>
 
-<%=f.submit %>
+<%=f.submit class:"btn btn-primary"%>
 
 <%end%>
